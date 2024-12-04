@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Space Explorer</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+              <!-- Menu supérieur -->
+<nav class="navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="/images/logo.png" alt="Logo" style="width: 50%; height: 40px;">
+        </a>
+        <ul class="nav">
+            <li class="nav-item"><a class="nav-link nav-highlight" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link nav-highlight" href="index.html">Prochaine Mission</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <!-- Barre latérale -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="planetes.html"><i class="fas fa-globe"></i> Planètes</a></li>
+                <li><a href="#"><i class="fas fa-rocket"></i> Véhicules</a></li>
+                <li><a href="#"><i class="fas fa-user-astronaut"></i> Personnes</a></li>
+            </ul>
+            
+        </div>
+
+ 
+
+        <!-- Page principale -->
+        <div class="container mt-5">
+            <h1 class="luminous-text">Bienvenue dans l'exploration spatiale</h1>
+            <p class="text-center">Découvrez toutes nos découvertes à propos du monde qui nous entoure !</p>
+            <div class="text-center">
+                <button class="btn">Découvrir</button>
+            </div>
+        </div>
+
+        <!-- Les chiffres -->
+        <div id="stats" class="container text-center my-5">
+            <h2>Statistiques</h2>
+            <div class="row">
+                <!-- Planètes -->
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-globe stat-icon"></i>
+                        <div class="stat-number" id="planets">0</div>
+                        <div class="stat-title">Planètes recensés</div>
+                    </div>
+                </div>
+                <!-- Véhicules -->
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-rocket stat-icon"></i>
+                        <div class="stat-number" id="vehicles">0</div>
+                        <div class="stat-title">Véhicules recensés</div>
+                    </div>
+                </div>
+                <!-- Personnes -->
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <i class="fas fa-user-astronaut stat-icon"></i>
+                        <div class="stat-number" id="people">0</div>
+                        <div class="stat-title">Êtres-vivants recensés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission -->
+        <div class="container text-center my-5">
+            <h2>Prochaine Mission</h2>
+            <p>Participez à notre prochaine mission prévue en juin 2024</p>
+            <button id="missionBtn" class="btn">Participer à la prochaine mission !</button>      
+          </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
