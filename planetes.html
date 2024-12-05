@@ -40,14 +40,29 @@
             <i class="fas fa-globe-europe glowing-icon me-3"></i> Explorez les Planètes
         </h1>
         
-        <p class="text-center">Explorez les caractéristiques et informations des planètes.</p>
+        
+        <div class="filter-container">
+            <label for="filter-population" class="filter-label">
+                <i class="fas fa-filter"></i> Filtrer par population :
+            </label>
+            <select id="filter-population" class="filter-select">
+                <option value="all">Toutes les populations</option>
+                <option value="small">0 à 100.000</option>
+                <option value="medium">100.000 à 100.000.000</option>
+                <option value="large">+100.000.000</option>
+            </select>
+        </div>
+        
+        
+    
         <div id="planet-list" class="text-center my-5">
-            <!-- les planètes sont générés dynamiquement via JavaScript dans `script-planetes.js` -->       
-             </div>
+            <!-- les planètes sont générées dynamiquement via JavaScript dans `script-planetes.js` -->       
+        </div>
         <div id="controle-pagination" class="text-center">
             <!-- les boutons sont générés dynamiquement via JavaScript dans `script-planetes.js` -->       
         </div>
     </div>
+    
     
 
     <!-- Modal pour afficher les détails -->

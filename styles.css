@@ -311,3 +311,68 @@ a, button, p, h1, h2, h3 {
     transition: background 0.3s ease-in-out;
 }
 
+.filter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.filter-label {
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.filter-label i {
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.filter-select {
+    padding: 15px 20px; /* Augmente l'espacement interne (hauteur) */
+    font-size: 1.2rem; /* Agrandit le texte */
+    height: auto; /* Permet d'ajuster automatiquement la hauteur */
+    border: none;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+
+.filter-select:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transform: scale(1.02);
+}
+
+.filter-select:focus {
+    outline: none;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6);
+}
+
+.filter-select {
+    transition: 0.3s ease-in-out;
+    animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.filter-container {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+}
