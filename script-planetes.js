@@ -4,15 +4,15 @@ const controlePagination = document.getElementById('controle-pagination');
 let urlPageActuelle = 'https://swapi.dev/api/planets/';
 let urlPageSuivante = null;
 let urlPagePrecedente = null;
-let planetsData = []; // Stocker les données des planètes récupérées
+let planetsData = []; // stocker les données des planètes récupérées
 
-// Récupérer et afficher les planètes d'une page
+// eécupérer et afficher les planètes d'une page
 async function recupererEtAfficherPlanetes(url) {
     try {
         const reponse = await fetch(url);
         const donnees = await reponse.json();
 
-        // Mettre à jour les URLs pour la pagination
+        //mettre à jour les URLs pour la pagination
         urlPageSuivante = donnees.next;
         urlPagePrecedente = donnees.previous;
 
@@ -23,9 +23,9 @@ async function recupererEtAfficherPlanetes(url) {
     }
 }
 
-// Afficher les planètes
+//afficher les planètes
 function afficherPlanetes(planetes) {
-    planetsData = planetes; // Stocker les données pour utilisation future
+    planetsData = planetes; // stocker les données pour utilisation future
     const elementsPlanetes = planetes
         .map((planete, index) => `
             <div class="carte-planete" data-index="${index}">
@@ -40,7 +40,7 @@ function afficherPlanetes(planetes) {
         <div class="liste-planetes">${elementsPlanetes}</div>
     `;
 
-    // Ajouter les écouteurs sur chaque carte pour cliquer
+    // ajouter les écouteurs sur chaque carte pour cliquer
     const cartesPlanetes = document.querySelectorAll('.carte-planete');
     cartesPlanetes.forEach(carte => {
         carte.addEventListener('click', afficherDetailsPlanete);
